@@ -23,9 +23,9 @@ public class FlightController {
     }
 
     @GetMapping(path="/getFlight/{flightId}")
-    public ResponseEntity<FlightResponse> getBookingById(@PathVariable Long flightId) {
-        FlightResponse bookingResponse = flightService.getFlightById(flightId);
-        return ResponseEntity.status(HttpStatus.OK).body(bookingResponse);
+    public ResponseEntity<FlightResponse> getFlightById(@PathVariable Long flightId) {
+        FlightResponse flightResponse = flightService.getFlightById(flightId);
+        return ResponseEntity.status(HttpStatus.OK).body(flightResponse);
     }
 
     @PostMapping(path="/create")
